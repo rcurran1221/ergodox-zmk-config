@@ -11,6 +11,320 @@
 #define LAYER_MOUSE 4
 
 / {
+behaviors {
+        // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
+        // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
+
+        layer_td: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER_TAP_DANCE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo 1>, <&to 1>;
+        };
+
+        magic: magic_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAGIC_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&rgb_ug_status_macro>;
+        };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <MOD_TAP_TERM>;
+            hold-trigger-on-release;
+            quick-tap-ms = <MOD_QUICK_TAP>;
+            require-prior-idle-ms = <HOME_ROW_MOD_IDLE>;
+            flavor =
+            MOD_FLAVOR;
+            hold-trigger-key-positions = <55 56 57 73 74 72 79 78 62 63 45 44 33 32 21 20 9 8 7 19 31 43 77 76 60 61 42 30 18 6 5 17 29 41 75 58 40 59 28 16 52 53 54 71 70 69>;
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <MOD_TAP_TERM>;
+            hold-trigger-on-release;
+            quick-tap-ms = <MOD_QUICK_TAP>;
+            require-prior-idle-ms = <HOME_ROW_MOD_IDLE>;
+            flavor =
+            MOD_FLAVOR;
+            hold-trigger-key-positions = <54 71 70 53 52 69 68 51 50 38 39 27 26 14 4 15 3 13 25 37 49 67 66 36 24 12 2 1 11 23 35 47 48 65 64 46 34 22 10 0 55 56 57 74 73 72>;
+        };
+
+        hml_shift: hml_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <55 56 57 73 74 72 79 78 62 63 45 44 33 32 21 20 9 8 7 19 31 43 77 76 60 61 42 30 18 6 5 17 29 41 75 58 40 59 28 16 52 53 54 71 70 69>;
+            hold-trigger-on-release;
+        };
+
+        hmr_shift: hmr_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <54 71 70 53 52 69 68 51 50 38 39 27 26 14 4 15 3 13 25 37 49 67 66 36 24 12 2 1 11 23 35 47 48 65 64 46 34 22 10 0 55 56 57 74 73 72>;
+            hold-trigger-on-release;
+        };
+
+        sticky_shift: sticky_shift {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_SHIFT";
+            bindings = <&sk>;
+            #binding-cells = <1>;
+            release-after-ms = <300>;
+            quick-release;
+        };
+
+        lt_left: lt_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_LEFT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <55 56 57 73 74 72 79 78 62 63 45 44 33 32 21 20 9 8 7 19 31 43 77 76 60 61 42 30 18 6 5 17 29 41 75 58 40 59 28 16 52 53 54 71 70 69>;
+            hold-trigger-on-release;
+        };
+
+        lt_right: lt_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_RIGHT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <54 71 70 53 52 69 68 51 50 38 39 27 26 14 4 15 3 13 25 37 49 67 66 36 24 12 2 1 11 23 35 47 48 65 64 46 34 22 10 0 55 56 57 74 73 72>;
+            hold-trigger-on-release;
+        };
+
+        shifty: shifty {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFTY";
+            bindings = <&sticky_shift LEFT_SHIFT>, <&caps_word>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        layer_left: layer_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_LEFT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            hold-trigger-on-release;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <55 56 57 73 74 72 79 78 62 63 45 44 33 32 21 20 9 8 7 19 31 43 77 76 60 61 42 30 18 6 5 17 29 41 75 58 40 59 28 16 52 53 54 71 70 69>;
+        };
+
+        layer_right: layer_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_RIGHT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            hold-trigger-on-release;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <54 71 70 53 52 69 68 51 50 38 39 27 26 14 4 15 3 13 25 37 49 67 66 36 24 12 2 1 11 23 35 47 48 65 64 46 34 22 10 0 55 56 57 74 73 72>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+
+        left_parent {
+            bindings = <&hmr RS(RIGHT_CONTROL) LEFT_PARENTHESIS>;
+            key-positions = <41 42>;
+            timeout-ms = <SHORT_COMBO_TIMEOUT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        right_paren {
+            bindings = <&hmr RC(RIGHT_ALT) RIGHT_PARENTHESIS>;
+            key-positions = <42 43>;
+            timeout-ms = <SHORT_COMBO_TIMEOUT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        left_bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <29 30>;
+            timeout-ms = <SHORT_COMBO_TIMEOUT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        right_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <30 31>;
+            timeout-ms = <SHORT_COMBO_TIMEOUT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        left_brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <59 60>;
+            timeout-ms = <SHORT_COMBO_TIMEOUT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        right_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <60 61>;
+            timeout-ms = <SHORT_COMBO_TIMEOUT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        underscore {
+            bindings = <&hmr LC(LEFT_ALT) UNDERSCORE>;
+            key-positions = <37 36>;
+            timeout-ms = <COMBO_TIMEOUT_LEFT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        dash {
+            bindings = <&hmr LS(LEFT_CONTROL) MINUS>;
+            key-positions = <38 37>;
+            timeout-ms = <COMBO_TIMEOUT_LEFT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <26 25>;
+            timeout-ms = <COMBO_TIMEOUT_LEFT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        equals {
+            bindings = <&kp EQUAL>;
+            key-positions = <25 24>;
+            timeout-ms = <COMBO_TIMEOUT_LEFT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        bang {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <23 24>;
+            timeout-ms = <COMBO_TIMEOUT_LEFT>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        at {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <47 48>;
+            timeout-ms = <COMBO_TIMEOUT_LEFT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        // star {
+        //   bindings = <&kp ASTERISK>;
+        // key-positions = <31 32>;
+        //timeout-ms = <SHORT_COMBO_TIMEOUT>;
+        //require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+        //layers = <0>;
+        //};
+
+        ampersand {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <62 61>;
+            timeout-ms = <SHORT_COMBO_TIMEOUT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        percent {
+            bindings = <&kp PERCENT>;
+            key-positions = <26 27>;
+            timeout-ms = <COMBO_TIMEOUT_LEFT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        lessthan {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <50 51>;
+            timeout-ms = <COMBO_TIMEOUT_LEFT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        greaterthan {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <58 59>;
+            timeout-ms = <SHORT_COMBO_TIMEOUT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        qmark {
+            bindings = <&kp QUESTION>;
+            key-positions = <43 44>;
+            timeout-ms = <SHORT_COMBO_TIMEOUT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        car {
+            bindings = <&hmr LS(LEFT_ALT) CARET>;
+            key-positions = <38 36>;
+            timeout-ms = <COMBO_TIMEOUT_LEFT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+
+        dollar {
+            bindings = <&hmr RS(RIGHT_ALT) DOLLAR>;
+            key-positions = <41 43>;
+            timeout-ms = <SHORT_COMBO_TIMEOUT>;
+            require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
+            layers = <0>;
+        };
+    };
 	keymap {
 		compatible = "zmk,keymap";
 
