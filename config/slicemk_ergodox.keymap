@@ -10,6 +10,17 @@
 #define LAYER_NMPAD 3
 #define LAYER_MOUSE 4
 
+#define HYPER LC(LS(LG(LALT)))
+#define SHORT_COMBO_TIMEOUT 18
+#define COMBO_TIMEOUT_LEFT 18
+#define PRIOR_IDLE_COMBO 150
+#define HOME_ROW_MOD_IDLE 150
+#define MOD_FLAVOR "balanced"
+#define MOD_TAP_TERM 280
+#define MOD_QUICK_TAP 200
+
+&sk { quick-release; };
+
 / {
     behaviors {
         // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
