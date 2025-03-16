@@ -50,6 +50,15 @@
             hold-trigger-key-positions = <66 68 73 74 76 72 67 71 75 70 69 65 47 21 7 6 46 34 20 19 33 45 59 5 4 18 32 44 58 57 43 31 17 3 2 16 42 30 56 55 41 29 15 1>;
         };
 
+        sticky_shift: sticky_shift {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_SHIFT";
+            bindings = <&sk>;
+            #binding-cells = <1>;
+            release-after-ms = <300>;
+            quick-release;
+        };
+
         shifty: shifty {
             compatible = "zmk,behavior-mod-morph";
             label = "SHIFTY";
