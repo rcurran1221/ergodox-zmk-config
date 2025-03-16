@@ -168,7 +168,7 @@
 
         left_parent {
             bindings = <&hmr RS(RIGHT_CONTROL) LEFT_PARENTHESIS>;
-            key-positions = <41 42>;
+            key-positions = <36 37>;
             timeout-ms = <SHORT_COMBO_TIMEOUT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -176,7 +176,7 @@
 
         right_paren {
             bindings = <&hmr RC(RIGHT_ALT) RIGHT_PARENTHESIS>;
-            key-positions = <42 43>;
+            key-positions = <37 38>;
             timeout-ms = <SHORT_COMBO_TIMEOUT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -184,7 +184,7 @@
 
         left_bracket {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <29 30>;
+            key-positions = <24 25>;
             timeout-ms = <SHORT_COMBO_TIMEOUT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -192,7 +192,7 @@
 
         right_bracket {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <30 31>;
+            key-positions = <25 26>;
             timeout-ms = <SHORT_COMBO_TIMEOUT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -200,7 +200,7 @@
 
         left_brace {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <59 60>;
+            key-positions = <50 51>;
             timeout-ms = <SHORT_COMBO_TIMEOUT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -208,7 +208,7 @@
 
         right_brace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <60 61>;
+            key-positions = <51 52>;
             timeout-ms = <SHORT_COMBO_TIMEOUT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -216,7 +216,7 @@
 
         underscore {
             bindings = <&hmr LC(LEFT_ALT) UNDERSCORE>;
-            key-positions = <37 36>;
+            key-positions = <32 31>;
             timeout-ms = <COMBO_TIMEOUT_LEFT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -224,7 +224,7 @@
 
         dash {
             bindings = <&hmr LS(LEFT_CONTROL) MINUS>;
-            key-positions = <38 37>;
+            key-positions = <33 32>;
             timeout-ms = <COMBO_TIMEOUT_LEFT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -232,7 +232,7 @@
 
         plus {
             bindings = <&kp PLUS>;
-            key-positions = <26 25>;
+            key-positions = <19 18>;
             timeout-ms = <COMBO_TIMEOUT_LEFT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -240,7 +240,7 @@
 
         equals {
             bindings = <&kp EQUAL>;
-            key-positions = <25 24>;
+            key-positions = <18 17>;
             timeout-ms = <COMBO_TIMEOUT_LEFT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -248,7 +248,7 @@
 
         bang {
             bindings = <&kp EXCLAMATION>;
-            key-positions = <23 24>;
+            key-positions = <16 17>;
             timeout-ms = <COMBO_TIMEOUT_LEFT>;
             require-prior-idle-ms = <150>;
             layers = <0>;
@@ -256,7 +256,7 @@
 
         at {
             bindings = <&kp AT_SIGN>;
-            key-positions = <47 48>;
+            key-positions = <42 43>;
             timeout-ms = <COMBO_TIMEOUT_LEFT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -272,7 +272,7 @@
 
         ampersand {
             bindings = <&kp AMPERSAND>;
-            key-positions = <62 61>;
+            key-positions = <53 52>;
             timeout-ms = <SHORT_COMBO_TIMEOUT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -280,7 +280,7 @@
 
         percent {
             bindings = <&kp PERCENT>;
-            key-positions = <26 27>;
+            key-positions = <20 19>;
             timeout-ms = <COMBO_TIMEOUT_LEFT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -288,7 +288,7 @@
 
         lessthan {
             bindings = <&kp LESS_THAN>;
-            key-positions = <50 51>;
+            key-positions = <46 45>;
             timeout-ms = <COMBO_TIMEOUT_LEFT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -296,7 +296,7 @@
 
         greaterthan {
             bindings = <&kp GREATER_THAN>;
-            key-positions = <58 59>;
+            key-positions = <49 50>;
             timeout-ms = <SHORT_COMBO_TIMEOUT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -304,7 +304,7 @@
 
         qmark {
             bindings = <&kp QUESTION>;
-            key-positions = <43 44>;
+            key-positions = <38 39>;
             timeout-ms = <SHORT_COMBO_TIMEOUT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -312,7 +312,7 @@
 
         car {
             bindings = <&hmr LS(LEFT_ALT) CARET>;
-            key-positions = <38 36>;
+            key-positions = <33 31>;
             timeout-ms = <COMBO_TIMEOUT_LEFT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
@@ -320,7 +320,7 @@
 
         dollar {
             bindings = <&hmr RS(RIGHT_ALT) DOLLAR>;
-            key-positions = <41 43>;
+            key-positions = <36 38>;
             timeout-ms = <SHORT_COMBO_TIMEOUT>;
             require-prior-idle-ms = <PRIOR_IDLE_COMBO>;
             layers = <0>;
