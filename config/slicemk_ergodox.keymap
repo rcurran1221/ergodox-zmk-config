@@ -281,7 +281,7 @@
             >;
         };
 
-        layer_4 {
+        mouse {
             bindings = <
 &bootloader
 &none        &none  &none  &none  &none  &none  &none    &none  &none           &none            &none           &none            &none  &none
