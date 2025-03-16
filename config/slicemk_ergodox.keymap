@@ -43,9 +43,9 @@
             hold-trigger-on-release;
             quick-tap-ms = <MOD_QUICK_TAP>;
             require-prior-idle-ms = <HOME_ROW_MOD_IDLE>;
-            flavor =
+            flavor;
             MOD_FLAVOR;
-            hold-trigger-key-positions = <55 56 57 73 74 72 79 78 62 63 45 44 33 32 21 20 9 8 7 19 31 43 77 76 60 61 42 30 18 6 5 17 29 41 75 58 40 59 28 16 52 53 54 71 70 69>;
+            hold-trigger-key-positions = <65 66 71 75 70 69 72 76 67 68 73 74 48 22 8 9 35 49 23 10 24 50 36 60 61 51 37 25 11 12 26 38 52 62 63 53 39 27 13 14 28 40 54 64>;
         };
 
         hmr: hmr {
@@ -58,9 +58,9 @@
             hold-trigger-on-release;
             quick-tap-ms = <MOD_QUICK_TAP>;
             require-prior-idle-ms = <HOME_ROW_MOD_IDLE>;
-            flavor =
+            flavor;
             MOD_FLAVOR;
-            hold-trigger-key-positions = <54 71 70 53 52 69 68 51 50 38 39 27 26 14 4 15 3 13 25 37 49 67 66 36 24 12 2 1 11 23 35 47 48 65 64 46 34 22 10 0 55 56 57 74 73 72>;
+            hold-trigger-key-positions = <66 68 73 74 76 72 67 71 75 70 69 65 47 21 7 6 46 34 20 19 33 45 59 5 4 18 32 44 58 57 43 31 17 3 2 16 42 30 56 55 41 29 15 1>;
         };
 
         hml_shift: hml_shift {
